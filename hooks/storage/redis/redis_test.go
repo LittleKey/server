@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
-	mqtt "github.com/mochi-mqtt/server/v2"
-	"github.com/mochi-mqtt/server/v2/hooks/storage"
-	"github.com/mochi-mqtt/server/v2/packets"
-	"github.com/mochi-mqtt/server/v2/system"
+	mqtt "github.com/littlekey/server/v3"
+	"github.com/littlekey/server/v3/hooks/storage"
+	"github.com/littlekey/server/v3/packets"
+	"github.com/littlekey/server/v3/system"
 
 	miniredis "github.com/alicebob/miniredis/v2"
 	redis "github.com/go-redis/redis/v8"

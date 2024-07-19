@@ -9,16 +9,16 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/mochi-mqtt/server/v2/hooks/auth"
-	"github.com/mochi-mqtt/server/v2/hooks/debug"
-	"github.com/mochi-mqtt/server/v2/hooks/storage/badger"
-	"github.com/mochi-mqtt/server/v2/hooks/storage/bolt"
-	"github.com/mochi-mqtt/server/v2/hooks/storage/pebble"
-	"github.com/mochi-mqtt/server/v2/hooks/storage/redis"
-	"github.com/mochi-mqtt/server/v2/listeners"
+	"github.com/littlekey/server/v3/hooks/auth"
+	"github.com/littlekey/server/v3/hooks/debug"
+	"github.com/littlekey/server/v3/hooks/storage/badger"
+	"github.com/littlekey/server/v3/hooks/storage/bolt"
+	"github.com/littlekey/server/v3/hooks/storage/pebble"
+	"github.com/littlekey/server/v3/hooks/storage/redis"
+	"github.com/littlekey/server/v3/listeners"
 	"gopkg.in/yaml.v3"
 
-	mqtt "github.com/mochi-mqtt/server/v2"
+	mqtt "github.com/littlekey/server/v3"
 )
 
 // config defines the structure of configuration data to be parsed from a config source.

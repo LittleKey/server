@@ -18,10 +18,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/mochi-mqtt/server/v2/hooks/storage"
-	"github.com/mochi-mqtt/server/v2/listeners"
-	"github.com/mochi-mqtt/server/v2/packets"
-	"github.com/mochi-mqtt/server/v2/system"
+	"github.com/littlekey/server/v3/hooks/storage"
+	"github.com/littlekey/server/v3/listeners"
+	"github.com/littlekey/server/v3/packets"
+	"github.com/littlekey/server/v3/system"
 
 	"log/slog"
 )

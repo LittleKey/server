@@ -8,23 +8,20 @@ import (
 	"context"
 	"errors"
 	"io"
+	"log/slog"
 	"net"
 	"net/http"
 	"sync"
 	"sync/atomic"
 	"time"
 
-	"log/slog"
-
 	"github.com/gorilla/websocket"
 )
 
 const TypeWS = "ws"
 
-var (
-	// ErrInvalidMessage indicates that a message payload was not valid.
-	ErrInvalidMessage = errors.New("message type not binary")
-)
+// ErrInvalidMessage indicates that a message payload was not valid.
+var ErrInvalidMessage = errors.New("message type not binary")
 
 // Websocket is a listener for establishing websocket connections.
 type Websocket struct { // [MQTT-4.2.0-1]
@@ -46,7 +43,8 @@ func NewWebsocket(config Config) *Websocket {
 		address: config.Address,
 		config:  config,
 		upgrader: &websocket.Upgrader{
-			Subprotocols: []string{"mqtt"},
+			EnableCompression: true,
+			Subprotocols:      []string{"mqtt"},
 			CheckOrigin: func(r *http.Request) bool {
 				return true
 			},
